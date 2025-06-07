@@ -1,0 +1,12 @@
+name: Status Check Functions
+on: push
+jobs:
+    skip-or-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Intentinally exit with error"
+              run: exit 1
+            - name: "Run if condition is true"
+              run: echo "Hello, error"
+              if: ${{ failure() }}
+        
