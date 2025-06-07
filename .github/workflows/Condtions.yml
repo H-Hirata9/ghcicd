@@ -1,0 +1,10 @@
+name: Condtions
+on: push
+jobs:
+    skip-or-run:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Run if condition is true"
+              run: echo "Hello, world"
+              if: ${{ contains(github.run_id, '1') }}
+        
