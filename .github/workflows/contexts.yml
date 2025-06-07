@@ -5,10 +5,3 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello, ${{ github.actor }}"
-            - run: echo "Repository: ${{ github.repository }}"
-            - run: echo "Branch: ${{ github.ref }}"
-            - run: echo "Event name: ${{ github.event_name }}"
-            - run: echo "Workflow run ID: ${{ github.run_id }}"
-            - run: echo "Workflow run number: ${{ github.run_number }}"
-            - run: echo "Workflow job ID: ${{ github.job }}"
-            - run: echo "Workflow job status: ${{ job.status }}"
