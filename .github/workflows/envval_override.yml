@@ -6,8 +6,8 @@ jobs:
     print:
         runs-on: ubuntu-latest
         steps:
-            - run: echo  "${ EXAMPLE }"
+            - run: echo "${EXAMPLE}"
             - env:
                 EXAMPLE: Overridden by step level
-              run: echo "${ EXAMPLE }"
+              run: echo "${EXAMPLE}"
 
