@@ -10,6 +10,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Comment on pull request
-        run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello @{GITTHUB_ACTOR}, this is a comment on your pull request."
+        run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}, this is a comment on your pull request."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
