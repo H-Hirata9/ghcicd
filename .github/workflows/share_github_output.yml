@@ -1,0 +1,12 @@
+name: GITHUB_OUTPUT
+on: push
+jobs:
+  share-github-output:
+    runs-on: ubuntu-latest
+    steps:
+       - id: source
+         name: Set output
+         run: echo "message=Hello, world" >> "${GITHUB_OUTPUT}"
+       - env:
+           MESSAGE: ${{ steps.source.outputs.message }}
+         run: echo "${MESSAGE}"
