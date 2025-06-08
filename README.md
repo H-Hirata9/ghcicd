@@ -1,1 +1,1 @@
-# ghcicd
+# GitHub Actions
